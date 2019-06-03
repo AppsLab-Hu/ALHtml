@@ -28,6 +28,11 @@ public class ALHtmlPrintingContext {
         for rangeAttribute in rangeAttributes {
             attributedString.addAttributes(rangeAttribute.attributes, range:rangeAttribute.range)
         }
+        
+        for link in linkDescriptors {
+            attributedString.addAttribute(.underlineStyle, value: NSNumber(0), range: link.characterRange)
+        }
+        
         return attributedString
     }
 
@@ -76,7 +81,7 @@ public class ALHtmlPrintingContext {
     public func printLink(linkText: String, linkUrlString: String) {
         let linkCharacterRange = NSMakeRange(self.text.count, linkText.count)
         linkDescriptors.append((linkCharacterRange, linkUrlString))
-        let linkAttributes = [NSAttributedString.Key.font: theme.linkStyle.font, NSAttributedString.Key.foregroundColor: theme.linkStyle.textColor]
+        let linkAttributes = [NSAttributedString.Key.font: theme.linkStyle.font, NSAttributedString.Key.foregroundColor: theme.linkStyle.textColor, NSAttributedString.Key.link: linkUrlString] as [NSAttributedString.Key : AnyObject]
         self.print(text: linkText, attributes: linkAttributes)
     }
 
