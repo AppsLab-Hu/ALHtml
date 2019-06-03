@@ -75,6 +75,8 @@ public class ALHtmlParser {
             return [ALHtmlListItem(elements: gatherElements(rootNode: element))]
         case "br":
             return [ALHtmlLineBreak()]
+        case "s":
+            return [ALHtmlStrikethrough(elements: gatherElements(rootNode: element))]
         default:
             return [ALHtmlText(text: element.textContent)]
         }

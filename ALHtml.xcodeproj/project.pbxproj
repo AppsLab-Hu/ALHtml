@@ -10,6 +10,8 @@
 		0B22596022A539DC00CF15F5 /* ALHtml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B312B9922A53249001D751B /* ALHtml.framework */; };
 		0B22596122A539DC00CF15F5 /* ALHtml.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B312B9922A53249001D751B /* ALHtml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0B22596822A53D2000CF15F5 /* HTMLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B312BEA22A53475001D751B /* HTMLKit.framework */; };
+		0B22597022A54EE700CF15F5 /* ALHtmlStrikethrough.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22596F22A54EE700CF15F5 /* ALHtmlStrikethrough.swift */; };
+		0B22597222A54F7300CF15F5 /* ALHtmlStrikethrough+Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22597122A54F7300CF15F5 /* ALHtmlStrikethrough+Print.swift */; };
 		0B312B9E22A53249001D751B /* ALHtml.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B312B9C22A53249001D751B /* ALHtml.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0B312BC722A5325B001D751B /* ALHtmlLink+Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B312BA522A5325B001D751B /* ALHtmlLink+Print.swift */; };
 		0B312BC822A5325B001D751B /* ALHtmlPrintingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B312BA622A5325B001D751B /* ALHtmlPrintingContext.swift */; };
@@ -77,6 +79,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B22596F22A54EE700CF15F5 /* ALHtmlStrikethrough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALHtmlStrikethrough.swift; sourceTree = "<group>"; };
+		0B22597122A54F7300CF15F5 /* ALHtmlStrikethrough+Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ALHtmlStrikethrough+Print.swift"; sourceTree = "<group>"; };
 		0B312B9922A53249001D751B /* ALHtml.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ALHtml.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B312B9C22A53249001D751B /* ALHtml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALHtml.h; sourceTree = "<group>"; };
 		0B312B9D22A53249001D751B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 				0B312BB622A5325B001D751B /* ALHtmlBoldStyle.swift */,
 				0B312BB722A5325B001D751B /* ALHtmlCompoundElement+Print.swift */,
 				0B312BB822A5325B001D751B /* ALHtmlPrintingStyleQueue.swift */,
+				0B22597122A54F7300CF15F5 /* ALHtmlStrikethrough+Print.swift */,
 			);
 			path = Printing;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				0B312BC122A5325B001D751B /* ALHtmlListItem.swift */,
 				0B312BC222A5325B001D751B /* ALHtmlList.swift */,
 				0B312BC322A5325B001D751B /* ALHtmlBold.swift */,
+				0B22596F22A54EE700CF15F5 /* ALHtmlStrikethrough.swift */,
 				0B312BC422A5325B001D751B /* ALHtmlParagraph.swift */,
 				0B312BC522A5325B001D751B /* ALHtmlParser.swift */,
 				0B312BC622A5325B001D751B /* ALHtmlText.swift */,
@@ -394,10 +400,12 @@
 				0B312BC922A5325B001D751B /* ALHtmlLinkStyle.swift in Sources */,
 				0B312BD922A5325B001D751B /* ALHtmlCompoundElement+Print.swift in Sources */,
 				0B312BD822A5325B001D751B /* ALHtmlBoldStyle.swift in Sources */,
+				0B22597222A54F7300CF15F5 /* ALHtmlStrikethrough+Print.swift in Sources */,
 				0B312BCD22A5325B001D751B /* ALHtmlPrintingTheme.swift in Sources */,
 				0B312BD622A5325B001D751B /* ALHtmlParagraph+Print.swift in Sources */,
 				0B312BDE22A5325B001D751B /* ALHtmlItalic.swift in Sources */,
 				0B312BCE22A5325B001D751B /* ALHtmlBold+Print.swift in Sources */,
+				0B22597022A54EE700CF15F5 /* ALHtmlStrikethrough.swift in Sources */,
 				0B312BD322A5325B001D751B /* ALHtmlPrinting.swift in Sources */,
 				0B312BCF22A5325B001D751B /* ALHtmlHeadingStyle.swift in Sources */,
 				0B312BDF22A5325B001D751B /* ALHtmlLink.swift in Sources */,

@@ -20,8 +20,7 @@ class ViewController: UIViewController {
                                               sideMargins: SideMargins(left: 12, right: 12)
     )
     let linkStyle = ALHtmlLinkStyle(font: UIFont(name: "Helvetica-Bold", size: 14)!,
-                                    textColor: UIColor.blue,
-                                    highlightingColor: UIColor.lightGray
+                                    textColor: UIColor.blue
     )
     let boldStyle = ALHtmlBoldStyle(font: UIFont(name: "HelveticaNeue-Bold", size: 14)!, italicFont: UIFont(name: "HelveticaNeue-BoldItalic", size: 14)!)
     let italicStyle = ALHtmlItalicStyle(font: UIFont(name: "HelveticaNeue-Italic", size: 14)!, boldFont: UIFont(name: "HelveticaNeue-BoldItalic", size: 14)!)
@@ -35,7 +34,7 @@ class ViewController: UIViewController {
         
         let printingContext = ALHtmlPrintingContext(theme: ALHtmlPrintingTheme(paragraphStyle: paragraphStyle, headingStyles: headingStyles, linkStyle: linkStyle, boldStyle: boldStyle, italicStyle: italicStyle, listParagraphStyle: listParagraphStyle))
         
-        let string = "This is a string with html tags: <b>bold</b> <H1>header 1</H1> <u>underline</u> <p>paragraph</p> <p>paragraph</p> <p>paragraph</p>"
+        let string = "Headset equipment product description <br /><H1>Header 1</H1> <br /><H2>Header 2</H2> <br /><H3>Header 3</H3> <br /><p>This is a paragraph</p> <br /><a href=\"http://www.help.no\">This is a link</a> <br /><strong>Strong text with strong tag</strong> <br /><b><s>strikethrough text with s tag</s></b> <br /><em>List item 1</em> <br /><em>List item 2</em> <br />"
         let htmlContent = ALHtmlParser().parse(htmlContent: string)
         
         for htmlElement in htmlContent {

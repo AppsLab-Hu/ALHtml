@@ -128,4 +128,24 @@ public class ALHtmlPrintingContext {
             italicPrintingState.counter -= 1
         }
     }
+    
+    private var strikethroughPrintingState : (queueItemId: Int, counter: Int) = (0, 0)
+    public func startStrikethroughPrinting() {
+        if strikethroughPrintingState.counter == 0 {
+            strikethroughPrintingState.queueItemId = styleQueue.enqueueStyle(rangeStart: self.text.count, attributeName:NSAttributedString.Key.strikethroughStyle, attributeValue: NSUnderlineStyle.single.rawValue as AnyObject)
+        }
+        strikethroughPrintingState.counter += 1
+    }
+    
+    public func finishStrikethroughPrinting() {
+        if strikethroughPrintingState.counter <= 1 {
+            strikethroughPrintingState.counter = 0
+            let styles = styleQueue.styleComplete(queueItemId: strikethroughPrintingState.queueItemId, characterIndex: self.text.count-1)
+            for style in styles {
+                rangeAttributes.append((style.range, [style.attributeName:style.attributeValue]))
+            }
+        } else {
+            strikethroughPrintingState.counter -= 1
+        }
+    }
 }
