@@ -18,6 +18,7 @@ public class ALHtmlPrintingContext {
         paragraphStyle.lineSpacing = theme.paragraphStyle.lineSpacing
         paragraphStyle.minimumLineHeight = theme.paragraphStyle.minimumLineHeight
         paragraphStyle.hyphenationFactor = 1.0
+        paragraphStyle.alignment = theme.paragraphStyle.alignment
         let attributes = [
             NSAttributedString.Key.font: theme.paragraphStyle.font,
             NSAttributedString.Key.foregroundColor: theme.paragraphStyle.textColor,

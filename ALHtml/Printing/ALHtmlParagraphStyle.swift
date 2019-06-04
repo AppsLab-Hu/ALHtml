@@ -8,20 +8,22 @@ import UIKit
 
 public class ALHtmlParagraphStyle {
 
-    var font: UIFont
-    var textColor: UIColor
-    var backgroundColor: UIColor
+    let font: UIFont
+    let textColor: UIColor
+    let backgroundColor: UIColor
     let lineSpacing: CGFloat
     let minimumLineHeight: CGFloat
     let sideMargins: SideMargins
+    let alignment: NSTextAlignment
 
-    public init(font: UIFont, textColor: UIColor, backgroundColor: UIColor, lineSpacing: CGFloat, minimumLineHeight: CGFloat, sideMargins: SideMargins) {
+    public init(font: UIFont, textColor: UIColor, backgroundColor: UIColor, lineSpacing: CGFloat, minimumLineHeight: CGFloat, sideMargins: SideMargins, alignment: NSTextAlignment) {
         self.font = font
         self.textColor = textColor
         self.backgroundColor = backgroundColor
         self.lineSpacing = lineSpacing
         self.minimumLineHeight = minimumLineHeight
         self.sideMargins = sideMargins
+        self.alignment = alignment
     }
 
     public func getNSMutableParagraphStyle() -> NSMutableParagraphStyle {

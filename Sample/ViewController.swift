@@ -17,7 +17,8 @@ class ViewController: UIViewController {
                                               backgroundColor: UIColor.white,
                                               lineSpacing: 5,
                                               minimumLineHeight: 18,
-                                              sideMargins: SideMargins(left: 12, right: 12)
+                                              sideMargins: SideMargins(left: 12, right: 12),
+                                              alignment: .left
     )
     let linkStyle = ALHtmlLinkStyle(font: UIFont(name: "Helvetica-Bold", size: 14)!,
                                     textColor: UIColor.blue
