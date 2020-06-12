@@ -12,11 +12,13 @@ public class ALHtmlHeadingStyle {
     let textColor: UIColor
     let minimumLineHeight: CGFloat
     let isAllCaps: Bool
+    let addExtraLine: Bool
 
-    public init(font: UIFont, textColor: UIColor, minimumLineHeight: CGFloat, isAllCaps: Bool) {
+    public init(font: UIFont, textColor: UIColor, minimumLineHeight: CGFloat, isAllCaps: Bool, addExtraLine: Bool) {
         self.font = font
         self.textColor = textColor
         self.minimumLineHeight = minimumLineHeight
         self.isAllCaps = isAllCaps
+        self.addExtraLine = addExtraLine
     }
 }

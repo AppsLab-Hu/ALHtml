@@ -18,14 +18,14 @@ class ViewController: UIViewController {
                                               lineSpacing: 5,
                                               minimumLineHeight: 18,
                                               sideMargins: SideMargins(left: 12, right: 12),
-                                              alignment: .left
+                                              alignment: .left, addExtraLine: true
     )
     let linkStyle = ALHtmlLinkStyle(font: UIFont(name: "Helvetica-Bold", size: 14)!,
                                     textColor: UIColor.blue
     )
     let boldStyle = ALHtmlBoldStyle(font: UIFont(name: "HelveticaNeue-Bold", size: 14)!, italicFont: UIFont(name: "HelveticaNeue-BoldItalic", size: 14)!)
     let italicStyle = ALHtmlItalicStyle(font: UIFont(name: "HelveticaNeue-Italic", size: 14)!, boldFont: UIFont(name: "HelveticaNeue-BoldItalic", size: 14)!)
-    var headingStyles = [ALHtmlHeading.Level.H1: ALHtmlHeadingStyle(font: UIFont(name: "Helvetica", size: 22)!, textColor: UIColor.red, minimumLineHeight: 30, isAllCaps: false)]
+    var headingStyles = [ALHtmlHeading.Level.H1: ALHtmlHeadingStyle(font: UIFont(name: "Helvetica", size: 22)!, textColor: UIColor.red, minimumLineHeight: 30, isAllCaps: false, addExtraLine: true)]
     let listParagraphStyle = ALHtmlListParagraphStyle(headIndent: 42, firstLineHeadIndent: 14, tabStops:[NSTextTab(textAlignment: NSTextAlignment.natural, location: 42, options: [:])], font:UIFont(name: "HelveticaNeue-Italic", size: 14)!, lineSpacing:18, minimumLineHeight:18)
     
     override func viewDidLoad() {

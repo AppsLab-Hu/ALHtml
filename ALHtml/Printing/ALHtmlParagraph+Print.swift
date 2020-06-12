@@ -9,6 +9,9 @@ extension ALHtmlParagraph: ALHtmlPrinting {
 
     public func printToContext(context: ALHtmlPrintingContext) {
         printAllElements(context: context)
-        context.print(text: "\n")
+        let style = context.theme.paragraphStyle
+        if style.addExtraLine {
+            context.print(text: "\n")
+        }
     }
 }

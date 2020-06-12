@@ -15,8 +15,8 @@ public class ALHtmlParagraphStyle {
     let minimumLineHeight: CGFloat
     let sideMargins: SideMargins
     let alignment: NSTextAlignment
-
-    public init(font: UIFont, textColor: UIColor, backgroundColor: UIColor, lineSpacing: CGFloat, minimumLineHeight: CGFloat, sideMargins: SideMargins, alignment: NSTextAlignment) {
+    let addExtraLine: Bool
+    public init(font: UIFont, textColor: UIColor, backgroundColor: UIColor, lineSpacing: CGFloat, minimumLineHeight: CGFloat, sideMargins: SideMargins, alignment: NSTextAlignment, addExtraLine: Bool) {
         self.font = font
         self.textColor = textColor
         self.backgroundColor = backgroundColor
@@ -24,6 +24,7 @@ public class ALHtmlParagraphStyle {
         self.minimumLineHeight = minimumLineHeight
         self.sideMargins = sideMargins
         self.alignment = alignment
+        self.addExtraLine = addExtraLine
     }
 
     public func getNSMutableParagraphStyle() -> NSMutableParagraphStyle {

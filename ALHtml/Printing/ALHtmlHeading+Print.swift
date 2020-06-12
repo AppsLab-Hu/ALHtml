@@ -22,7 +22,9 @@ extension ALHtmlHeading: ALHtmlPrinting {
                           NSAttributedString.Key.paragraphStyle: paragraphStyle
         ]
         context.print(text: printingText, attributes: attributes)
-        context.print(text: "\n")
+        if headingSyle.addExtraLine {
+            context.print(text: "\n")
+        }
     }
 
 }
